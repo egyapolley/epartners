@@ -229,7 +229,7 @@ router.post("/bundles", passport.authenticate('basic', {
 
     }
 
-    const url = "http://172.25.38.43:2222";
+    const url = "http://172.25.39.16:2222";
     const sampleHeaders = {
         'User-Agent': 'NodeApp',
         'Content-Type': 'text/xml;charset=UTF-8',
@@ -244,7 +244,7 @@ router.post("/bundles", passport.authenticate('basic', {
          <CC_Calling_Party_Id>${accountId}</CC_Calling_Party_Id>
          <CHANNEL>${channel}</CHANNEL>
          <TRANSACTION_ID>${transactionId}</TRANSACTION_ID>
-         <Recipient_Number>${subscriberNumber}</Recipient_Number>
+         <Recipient_Number>233255000102</Recipient_Number>
          <RECEPIENT_WALLET_TYPE>Primary</RECEPIENT_WALLET_TYPE>
          <AMOUNT>${bundleId}</AMOUNT>
          <Request_type>Data</Request_type>
@@ -373,7 +373,7 @@ router.get("/transactions", passport.authenticate('basic', {
     }
 
 
-    const url = "http://172.25.38.42:3003";
+    const url = "http://172.25.39.13:3003";
     const sampleHeaders = {
         'User-Agent': 'NodeApp',
         'Content-Type': 'text/xml;charset=UTF-8',
@@ -637,7 +637,7 @@ router.get("/balance", passport.authenticate('basic', {
 
 
 
-    const url = "http://172.25.38.42:3003";
+    const url = "http://172.25.39.13:3003";
     const sampleHeaders = {
         'User-Agent': 'NodeApp',
         'Content-Type': 'text/xml;charset=UTF-8',

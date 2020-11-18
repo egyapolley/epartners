@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a2ceeae-bf5b-4f7b-bdd3-d7b4c810a583" name="Default Changelist" comment="" />
+    <list default="true" id="5a2ceeae-bf5b-4f7b-bdd3-d7b4c810a583" name="Default Changelist" comment="Initial commit and cert deletion">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +17,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1kPpMxY04pqCqfPLUvbeIYV1LBt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -52,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605612036565</updated>
-      <workItem from="1605612037624" duration="31170000" />
+      <workItem from="1605612037624" duration="33282000" />
     </task>
     <servers />
   </component>
@@ -67,6 +74,18 @@
       <screen x="0" y="23" width="1440" height="833" />
     </state>
     <state x="417" y="249" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.833@0.23.1440.833" timestamp="1605656813760" />
+    <state x="299" y="42" key="CommitChangelistDialog2" timestamp="1605720385943">
+      <screen x="0" y="23" width="1440" height="833" />
+    </state>
+    <state x="299" y="42" key="CommitChangelistDialog2/0.23.1440.833@0.23.1440.833" timestamp="1605720385943" />
+    <state x="586" y="343" key="Github.ShareDialog" timestamp="1605720467868">
+      <screen x="0" y="23" width="1440" height="833" />
+    </state>
+    <state x="586" y="343" key="Github.ShareDialog/0.23.1440.833@0.23.1440.833" timestamp="1605720467868" />
+    <state x="507" y="144" key="Github.UntrackedFilesDialog" timestamp="1605720473302">
+      <screen x="0" y="23" width="1440" height="833" />
+    </state>
+    <state x="507" y="144" key="Github.UntrackedFilesDialog/0.23.1440.833@0.23.1440.833" timestamp="1605720473302" />
     <state width="1419" height="216" key="GridCell.Tab.0.bottom" timestamp="1605700678516">
       <screen x="0" y="23" width="1440" height="833" />
     </state>
