@@ -244,7 +244,7 @@ router.post("/bundles", passport.authenticate('basic', {
          <CC_Calling_Party_Id>${accountId}</CC_Calling_Party_Id>
          <CHANNEL>${channel}</CHANNEL>
          <TRANSACTION_ID>${transactionId}</TRANSACTION_ID>
-         <Recipient_Number>233255000102</Recipient_Number>
+         <Recipient_Number>${subscriberNumber}</Recipient_Number>
          <RECEPIENT_WALLET_TYPE>Primary</RECEPIENT_WALLET_TYPE>
          <AMOUNT>${bundleId}</AMOUNT>
          <Request_type>Data</Request_type>
