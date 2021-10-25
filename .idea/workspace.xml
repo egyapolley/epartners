@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a2ceeae-bf5b-4f7b-bdd3-d7b4c810a583" name="Default Changelist" comment="">
+    <list default="true" id="5a2ceeae-bf5b-4f7b-bdd3-d7b4c810a583" name="Default Changelist" comment="changed to point to Prod.&#10;hard code the subscriber number 233255000102 in the purchase api">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/validators.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/validators.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +33,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="12.18.1" />
-    <property name="javascript.nodejs.core.library.typings.version" value="12.19.9" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.17.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.17.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/certs" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -65,6 +73,7 @@
       <workItem from="1608289186876" duration="1209000" />
       <workItem from="1611075997252" duration="864000" />
       <workItem from="1611348501370" duration="581000" />
+      <workItem from="1635163919256" duration="4036000" />
     </task>
     <task id="LOCAL-00001" summary="changed to point to Prod.&#10;hard code the subscriber number 233255000102 in the purchase api">
       <created>1605739310711</created>
@@ -82,46 +91,19 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="changed to point to Prod.&#10;hard code the subscriber number 233255000102 in the purchase api" />
     <option name="LAST_COMMIT_MESSAGE" value="changed to point to Prod.&#10;hard code the subscriber number 233255000102 in the purchase api" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="417" y="249" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605656813760">
-      <screen x="0" y="23" width="1440" height="833" />
-    </state>
-    <state x="417" y="249" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.833@0.23.1440.833" timestamp="1605656813760" />
-    <state x="299" y="42" key="CommitChangelistDialog2" timestamp="1605739310477">
-      <screen x="0" y="23" width="1440" height="833" />
-    </state>
-    <state x="299" y="42" key="CommitChangelistDialog2/0.23.1440.833@0.23.1440.833" timestamp="1605739310477" />
-    <state x="586" y="343" key="Github.ShareDialog" timestamp="1605720467868">
-      <screen x="0" y="23" width="1440" height="833" />
-    </state>
-    <state x="586" y="343" key="Github.ShareDialog/0.23.1440.833@0.23.1440.833" timestamp="1605720467868" />
-    <state x="507" y="144" key="Github.UntrackedFilesDialog" timestamp="1605720473302">
-      <screen x="0" y="23" width="1440" height="833" />
-    </state>
-    <state x="507" y="144" key="Github.UntrackedFilesDialog/0.23.1440.833@0.23.1440.833" timestamp="1605720473302" />
-    <state width="1419" height="216" key="GridCell.Tab.0.bottom" timestamp="1605770058751">
-      <screen x="0" y="23" width="1440" height="833" />
-    </state>
-    <state width="1419" height="216" key="GridCell.Tab.0.bottom/0.23.1440.833@0.23.1440.833" timestamp="1605770058751" />
-    <state width="1419" height="216" key="GridCell.Tab.0.center" timestamp="1605770058747">
-      <screen x="0" y="23" width="1440" height="833" />
-    </state>
-    <state width="1419" height="216" key="GridCell.Tab.0.center/0.23.1440.833@0.23.1440.833" timestamp="1605770058747" />
-    <state width="1419" height="216" key="GridCell.Tab.0.left" timestamp="1605770058745">
-      <screen x="0" y="23" width="1440" height="833" />
-    </state>
-    <state width="1419" height="216" key="GridCell.Tab.0.left/0.23.1440.833@0.23.1440.833" timestamp="1605770058745" />
-    <state width="1419" height="216" key="GridCell.Tab.0.right" timestamp="1605770058749">
-      <screen x="0" y="23" width="1440" height="833" />
-    </state>
-    <state width="1419" height="216" key="GridCell.Tab.0.right/0.23.1440.833@0.23.1440.833" timestamp="1605770058749" />
-    <state x="320" y="179" key="Vcs.Push.Dialog.v2" timestamp="1605739312918">
-      <screen x="0" y="23" width="1440" height="833" />
-    </state>
-    <state x="320" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.833@0.23.1440.833" timestamp="1605739312918" />
   </component>
 </project>

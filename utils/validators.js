@@ -13,9 +13,6 @@ module.exports = {
                 .messages({"string.pattern.base": "subscriberNumber must start with 233"}),
 
             channel: Joi.string()
-                .alphanum()
-                .min(3)
-                .max(50)
                 .required(),
 
         });
@@ -36,9 +33,6 @@ module.exports = {
                 .messages({"string.pattern.base": "subscriberNumber must start with 233"}),
 
             channel: Joi.string()
-                .alphanum()
-                .min(3)
-                .max(50)
                 .required(),
 
             transactionId: Joi.string()
@@ -65,9 +59,6 @@ module.exports = {
 
         const schema = Joi.object({
             channel: Joi.string()
-                .alphanum()
-                .min(3)
-                .max(50)
                 .required(),
 
             accountId: Joi.string()
@@ -89,9 +80,6 @@ module.exports = {
 
         const schema = Joi.object({
             channel: Joi.string()
-                .alphanum()
-                .min(3)
-                .max(50)
                 .required(),
 
             accountId: Joi.string()

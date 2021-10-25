@@ -2,9 +2,10 @@ const express = require("express");
 const router = require("./routes/index");
 const mongoose = require("mongoose");
 const helmet = require("helmet");
+const path = require("path")
 
 
-require("dotenv").config();
+require("dotenv").config({path:path.join(__dirname,'custom.env')});
 
 mongoose.connect("mongodb://localhost/epartners", {
     useNewUrlParser: true,
@@ -18,17 +19,15 @@ mongoose.connect("mongodb://localhost/epartners", {
     app.use(express.json());
     app.use(express.urlencoded({extended: false}));
 
-    let PORT = process.env.PORT || 6000;
-    let HOST = process.env.PROD_HOST;
+    let PORT = process.env.PORT
+    let HOST = process.env.HOST;
 
-    if (process.env.NODE_ENV === "development") {
-        HOST = process.env.TEST_HOST;
-    }
+
 
     app.use(router);
 
     app.listen(PORT, () => {
-        console.log(`Server running in ${process.env.NODE_ENV} on url : http://${HOST}:${PORT}`)
+        console.log(`Server running  on url : http://${HOST}:${PORT}`)
     })
 
 }).catch(err => {

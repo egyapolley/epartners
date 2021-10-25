@@ -81,7 +81,7 @@ router.get("/bundles", passport.authenticate('basic', {
         'User-Agent': 'NodeApp',
         'Content-Type': 'text/xml;charset=UTF-8',
         'SOAPAction': 'http://SCLINSMSVM01P/wsdls/Surfline/VoucherRecharge_USSD/VoucherRecharge_USSD',
-        'Authorization': 'Basic YWlhb3NkMDE6YWlhb3NkMDE='
+        'Authorization': `${process.env.OSD_AUTH}`
     };
 
     let xmlRequest = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pac="http://SCLINSMSVM01P/wsdls/Surfline/PackageQuery.wsdl">
@@ -234,7 +234,7 @@ router.post("/bundles", passport.authenticate('basic', {
         'User-Agent': 'NodeApp',
         'Content-Type': 'text/xml;charset=UTF-8',
         'SOAPAction': 'http://SCLINSMSVM01P/wsdls/Surfline/VoucherRecharge_USSD/VoucherRecharge_USSD',
-        'Authorization': 'Basic YWlhb3NkMDE6YWlhb3NkMDE='
+        'Authorization': `${process.env.OSD_AUTH}`
     };
 
     let xmlRequest = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:epar="http://SCLINSMSVM01P/wsdls/Surfline/EpartnerDataPurchase.wsdl">
@@ -338,8 +338,8 @@ router.post("/user", async (req, res) => {
 router.get("/transactions", passport.authenticate('basic', {
     session: false
 }), async (req, res) => {
-    let {accountId, begin_date, end_date, channel,maxRecords} = req.body;
-    const {error} = validator.validateTransactionsQuery({accountId,channel,maxRecords});
+    let {accountId, begin_date, end_date, channel, maxRecords} = req.body;
+    const {error} = validator.validateTransactionsQuery({accountId, channel, maxRecords});
     if (error) {
         return res.json({
             status: 2,
@@ -364,7 +364,7 @@ router.get("/transactions", passport.authenticate('basic', {
     begin_date = moment(begin_date, 'DD-MM-YYYY HH:mm:ss').format("YYYYMMDDHHmmss");
     end_date = moment(end_date, 'DD-MM-YYYY HH:mm:ss').format("YYYYMMDDHHmmss");
 
-    if (moment(end_date,'YYYYMMDDHHmmss').isSameOrBefore(moment(begin_date,'YYYYMMDDHHmmss'))){
+    if (moment(end_date, 'YYYYMMDDHHmmss').isSameOrBefore(moment(begin_date, 'YYYYMMDDHHmmss'))) {
         return res.json({
             status: 2,
             reason: `Invalid Request end_date value, must be greater than begin_date`
@@ -386,8 +386,8 @@ router.get("/transactions", passport.authenticate('basic', {
    <soapenv:Body>
       <pi:CCSCD7_QRY>
          <pi:AUTH/>
-         <pi:username>admin</pi:username>
-         <pi:password>admin</pi:password>
+         <pi:username>${process.env.PI_USER}</pi:username>
+         <pi:password>${process.env.PI_PASS}</pi:password>
          <pi:MSISDN>${accountId}</pi:MSISDN>
          <pi:WALLET_TYPE>Primary</pi:WALLET_TYPE>
          <pi:EDR_TYPE>5</pi:EDR_TYPE>
@@ -612,8 +612,8 @@ router.get("/transactions", passport.authenticate('basic', {
 router.get("/balance", passport.authenticate('basic', {
     session: false
 }), async (req, res) => {
-    let {accountId,channel} = req.body;
-    const {error} = validator.validateBalanceQuery({accountId,channel});
+    let {accountId, channel} = req.body;
+    const {error} = validator.validateBalanceQuery({accountId, channel});
     if (error) {
         return res.json({
             status: 2,
@@ -636,7 +636,6 @@ router.get("/balance", passport.authenticate('basic', {
     }
 
 
-
     const url = "http://172.25.39.13:3003";
     const sampleHeaders = {
         'User-Agent': 'NodeApp',
@@ -648,8 +647,8 @@ router.get("/balance", passport.authenticate('basic', {
    <soapenv:Header/>
    <soapenv:Body>
       <pi:CCSCD1_QRY>
-         <pi:username>admin</pi:username>
-         <pi:password>admin</pi:password>
+         <pi:username>${process.env.PI_USER}</pi:username>
+         <pi:password>${process.env.PI_PASS}</pi:password>
          <pi:MSISDN>${accountId}</pi:MSISDN>
          <pi:LIST_TYPE>BALANCE</pi:LIST_TYPE>
          <pi:WALLET_TYPE>Primary</pi:WALLET_TYPE>
@@ -662,30 +661,25 @@ router.get("/balance", passport.authenticate('basic', {
         const {response} = await soapRequest({url: url, headers: sampleHeaders, xml: xmlRequest, timeout: 5000}); // Optional timeout parameter(milliseconds)
 
         const {body} = response;
-        let balance =null;
+        let balance = null;
 
         if (parser.validate(body) === true) { //optional (it'll return an object in case it's not valid)
             let jsonObj = parser.parse(body, options);
-            if (jsonObj.Envelope.Body.CCSCD1_QRYResponse && jsonObj.Envelope.Body.CCSCD1_QRYResponse.BALANCE ) {
+            if (jsonObj.Envelope.Body.CCSCD1_QRYResponse && (jsonObj.Envelope.Body.CCSCD1_QRYResponse.BALANCE !== null || jsonObj.Envelope.Body.CCSCD1_QRYResponse.BALANCE !== undefined)) {
                 balance = jsonObj.Envelope.Body.CCSCD1_QRYResponse.BALANCE.toString();
-                if (balance){
-                    balance = parseFloat((parseFloat(balance)/100).toFixed(2));
+                if (balance) {
+                    balance = parseFloat((parseFloat(balance) / 100).toFixed(2));
                     return res.json(
                         {
                             status: 0,
                             reason: "success",
-                            balance:balance.toLocaleString()
+                            balance: balance.toLocaleString()
                         })
                 }
 
 
-
-
-
-
             } else {
                 let soapFault = jsonObj.Envelope.Body.Fault;
-                let faultString = soapFault.faultstring;
                 console.log(soapFault);
                 return res.json(
                     {
@@ -697,11 +691,6 @@ router.get("/balance", passport.authenticate('basic', {
             }
 
         }
-
-
-
-
-
 
 
     } catch (error) {
