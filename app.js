@@ -1,5 +1,6 @@
 const express = require("express");
 const router = require("./routes/index");
+const routerTest = require("./routes/indexTest");
 const mongoose = require("mongoose");
 const helmet = require("helmet");
 const path = require("path")
@@ -25,6 +26,7 @@ mongoose.connect("mongodb://localhost/epartners", {
 
 
     app.use(router);
+    app.use("/test", routerTest)
 
     app.listen(PORT, () => {
         console.log(`Server running  on url : http://${HOST}:${PORT}`)

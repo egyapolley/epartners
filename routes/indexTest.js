@@ -156,6 +156,7 @@ router.get("/bundles", passport.authenticate('basic', {
                                     price: channel === 'SMSGH'?price:parseFloat(price.substring(3)).toFixed(2),
                                     bundleId: bundleId,
                                     description:getBundleDesc(catObject.name)
+
                                 });
                         }
                     }
@@ -241,10 +242,10 @@ router.post("/bundles", passport.authenticate('basic', {
    <soapenv:Header/>
    <soapenv:Body>
       <epar:EpartnerDataPurchaseRequest>
-         <CC_Calling_Party_Id>${accountId}</CC_Calling_Party_Id>
+         <CC_Calling_Party_Id>233888888888</CC_Calling_Party_Id>
          <CHANNEL>${channel}</CHANNEL>
          <TRANSACTION_ID>${transactionId}</TRANSACTION_ID>
-         <Recipient_Number>${subscriberNumber}</Recipient_Number>
+         <Recipient_Number>233255000102</Recipient_Number>
          <RECEPIENT_WALLET_TYPE>Primary</RECEPIENT_WALLET_TYPE>
          <AMOUNT>${bundleId}</AMOUNT>
          <Request_type>Data</Request_type>

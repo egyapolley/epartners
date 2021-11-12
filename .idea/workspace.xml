@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a2ceeae-bf5b-4f7b-bdd3-d7b4c810a583" name="Default Changelist" comment="changed to point to Prod.&#10;hard code the subscriber number 233255000102 in the purchase api">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="5a2ceeae-bf5b-4f7b-bdd3-d7b4c810a583" name="Default Changelist" comment="Updated with Custom.env">
+      <change afterPath="$PROJECT_DIR$/routes/indexTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/validators.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/validators.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,22 +35,27 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.17.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.17.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/certs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/routes" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\WebstormProjects\epartners\routes" />
       <recent name="$PROJECT_DIR$/certs" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.app.js">
+  <component name="RunManager" selected="Node.js.test.js">
     <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/app.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.test.js" />
         <item itemvalue="Node.js.app.js" />
       </list>
     </recent_temporary>
@@ -73,7 +75,9 @@
       <workItem from="1608289186876" duration="1209000" />
       <workItem from="1611075997252" duration="864000" />
       <workItem from="1611348501370" duration="581000" />
-      <workItem from="1635163919256" duration="4036000" />
+      <workItem from="1635163919256" duration="4143000" />
+      <workItem from="1636534356277" duration="2624000" />
+      <workItem from="1636628797111" duration="13852000" />
     </task>
     <task id="LOCAL-00001" summary="changed to point to Prod.&#10;hard code the subscriber number 233255000102 in the purchase api">
       <created>1605739310711</created>
@@ -82,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605739310711</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated with Custom.env">
+      <created>1635169033652</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1635169033652</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,9 +112,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="changed to point to Prod.&#10;hard code the subscriber number 233255000102 in the purchase api" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed to point to Prod.&#10;hard code the subscriber number 233255000102 in the purchase api" />
+    <MESSAGE value="Updated with Custom.env" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated with Custom.env" />
   </component>
 </project>
